@@ -71,13 +71,13 @@ Paid multiplayer is the only segment that clearly beats expectations. Free multi
 - Games with an all-time peak under 100 players are dropped. With tiny player counts, the growth ratio explodes on noise (going from 2 players to 40 is not virality).
 - The regression and growth scores use a stricter cut: launch peak of at least 100, leaving 2,354 games.
 - A few columns in the games dataset are unreliable. The `peak_ccu` field disagrees with the player-count data, so I dropped it and used the monthly data instead.
-- Growth is measured against the first two months after release, not the first month, since release timing within a month varies.
+- Growth is measured against the first two months after release instead of just the first month, since release timing within a month varies.
 
 ## Files
 
-- [data-cleaning.ipynb](data-cleaning.ipynb) — downloads both datasets, parses the games JSON, merges on app ID, builds the derived columns (months since launch, launch peak, gain consistency), writes `joined.csv`
-- [analysis.ipynb](analysis.ipynb) — everything above
-- `joined.csv` — the merged dataset, not committed (137 MB). Run the cleaning notebook to regenerate it.
+- [data-cleaning.ipynb](data-cleaning.ipynb) - downloads both datasets, parses the games JSON, merges on app ID, builds the derived columns (months since launch, launch peak, gain consistency), writes `joined.csv`
+- [analysis.ipynb](analysis.ipynb) - everything above
+- `joined.csv` - the merged dataset, not committed (137 MB). Run the cleaning notebook to regenerate it.
 
 ## Running it
 
